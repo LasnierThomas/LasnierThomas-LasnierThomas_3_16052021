@@ -2,7 +2,8 @@
 @import "utils";
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;900&display=swap');
-
+@import "base";
+//****** Booking ******
 .booking{
     display: flex;
     flex-direction: column;
@@ -62,8 +63,137 @@
             transition: all 0.2s ease-in-out;
             transform: scale(1.1);
         } 
+
+
+// ****** Opération ******        
 }
 .operation{
     display: flex;
     flex-direction: column;
+    
 }
+.operation-title{
+    font-size: 30px;
+    font-weight: bold;
+    font-family: 'Roboto', cursive;
+    margin: 40px 0px 30px 20px;
+}
+.menu-operation{
+    display: flex;
+    align-items: center;
+flex-direction: column;
+}
+
+.button{
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    border: transparent solid 1px;
+    background-color: rgb(245, 245, 245);
+    border-radius: 20px;
+    margin-bottom: 20px;
+    margin-left: 5%;
+    text-align: center;
+    width: 300px;
+    height: 65px; 
+    &:hover{   
+        background-color: #f1e7ff;
+     } 
+}
+.button-number{
+    display: flex;
+    position: absolute;
+    left: -15px;
+    justify-content: flex-start;
+    align-content: center;
+    border: $color-1 solid 1px;
+    border-radius: 50%;
+    width: 3%;
+    background-color: $color-1;
+    color: white;
+    padding: 8px 12px 6px 12px;
+}
+.button-icone{
+    display: inline;
+    align-content: center;
+    margin: 0 20px;
+    padding: 0px;
+    
+}
+.button-title{
+    display: inline;
+    font-family: 'Roboto', cursive;
+    font-weight: bold;
+}
+
+
+// ****** Menu ******
+
+.menu{
+   
+    background-color: rgb(228, 228, 228);
+    width: 100%;
+    height: 100%;
+    padding-top: 30px;
+}
+.menu-title{
+    font-size: 30px;
+    font-weight: bold;
+    font-family: 'Roboto', cursive;
+    margin: 40px 0px 30px 20px;
+}
+
+
+.box-menu{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    background-color: white;
+    border-radius: 20px;
+    margin: 5%;
+
+    img{
+        width: 100%;
+        height: 230px;
+        border-radius: 20px 20px 0 0;
+        object-fit: cover;
+    }
+        h2{
+        font-family: 'Roboto', cursive;
+        font-weight: bold;
+        margin-left: 15px;
+    }
+            p{
+                font-family: 'Roboto', cursive;
+                margin: 0 0 15px 15px;
+                font-size: 24px;
+                line-height: 0;
+            }
+}
+#menu-new{
+    display: flex;
+    position: absolute;
+    align-self: flex-end;
+    margin: 20px 20px 0 0;
+    background-color: $color-3;
+    color: #21866d;
+    font-family: 'Roboto', cursive;
+    font-weight: bold;
+    border-radius: 5px;
+    font-size: 18px;
+    padding: 15px 25px 15px 25px;
+}
+
+#heart{
+    display: flex;
+    position: absolute;
+    bottom: 25px;
+    right: 30px;
+    &:hover{
+        color: linear-gradient(142deg, rgba(231,113,218,1) 0%, rgba(147,86,220,1) 100%);;
+    }
+}
+
+
