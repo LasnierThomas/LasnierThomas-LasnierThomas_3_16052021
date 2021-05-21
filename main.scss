@@ -3,6 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;900&display=swap');
 @import "base";
+@import "footer";
 //****** Booking ******
 .booking{
     display: flex;
@@ -81,7 +82,7 @@
 .menu-operation{
     display: flex;
     align-items: center;
-flex-direction: column;
+    flex-direction: column;
 }
 
 .button{
@@ -136,6 +137,7 @@ flex-direction: column;
     width: 100%;
     height: 100%;
     padding-top: 30px;
+    padding-bottom: 50px;
 }
 .menu-title{
     font-size: 30px;
@@ -191,9 +193,25 @@ flex-direction: column;
     position: absolute;
     bottom: 25px;
     right: 30px;
+    z-index: 3;
     &:hover{
-        color: linear-gradient(142deg, rgba(231,113,218,1) 0%, rgba(147,86,220,1) 100%);;
+        display: none;
+    }
+    
+    
+    
+}
+.heart-2{
+    display: flex;
+    position:absolute;
+    bottom: 25px;
+    right: 30px;
+    z-index: 1;
+    display: none;
+    &:hover{
+        z-index: 1;
+        display: flex;
+        color: purple;
     }
 }
-
 
