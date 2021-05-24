@@ -1,10 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 .head-title {
@@ -209,7 +206,7 @@ footer {
   padding-bottom: 50px;
 }
 
-.menu-title {
+#menu-title {
   font-size: 30px;
   font-weight: bold;
   font-family: "Roboto", cursive;
@@ -242,6 +239,10 @@ footer {
   font-size: 24px;
   line-height: 0;
 }
+.box-menu a {
+  text-decoration: none;
+  color: black;
+}
 
 #menu-new {
   display: flex;
@@ -262,17 +263,33 @@ footer {
   position: absolute;
   bottom: 25px;
   right: 30px;
+  opacity: 1;
+  font-size: 2em;
 }
 .heart:hover {
-  opacity: 1;
-  transition: opacity 1s;
-  background: linear-gradient(142deg, #e771da 0%, #9356dc 100%);
-  -webkit-mask-image: url(-webkit-mask-image);
-  mask-image: url(https://fontawesome.com/icons/heart?style=regular.svg);
+  opacity: 0;
 }
-.heart:active {
+
+.heart-like {
+  display: flex;
+  position: absolute;
+  bottom: 24px;
+  right: 28px;
+  font-size: 2.2em;
+  opacity: 0;
+}
+.heart-like:hover {
   opacity: 1;
-  background: linear-gradient(142deg, #e771da 0%, #9356dc 100%);
+  transition: 0.5s;
+  background: linear-gradient(349deg, #ff79da 29%, #9356dc 59%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.heart-like:hover:active {
+  opacity: 1;
+  background: linear-gradient(349deg, #ff79da 29%, #9356dc 59%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 /*# sourceMappingURL=style.css.map */

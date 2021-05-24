@@ -1,6 +1,5 @@
 @import "header";
 @import "utils";
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;900&display=swap');
 @import "base";
 @import "footer";
@@ -139,7 +138,7 @@
     padding-top: 30px;
     padding-bottom: 50px;
 }
-.menu-title{
+#menu-title{
     font-size: 30px;
     font-weight: bold;
     font-family: 'Roboto', cursive;
@@ -173,6 +172,10 @@
                 font-size: 24px;
                 line-height: 0;
             }
+            a{
+                text-decoration: none;
+                color: black;
+            }
 }
 #menu-new{
     display: flex;
@@ -193,16 +196,34 @@
     position: absolute;
     bottom: 25px;
     right: 30px;
+    opacity: 1;
+    font-size: 2em; 
     &:hover{
-        opacity: 1;
-        transition: opacity 1s;
-        background: linear-gradient(142deg, rgba(231,113,218,1) 0%, rgba(147,86,220,1) 100%);
-        -webkit-mask-image:url(-webkit-mask-image);
-        mask-image: url(https://fontawesome.com/icons/heart?style=regular.svg);   
+        opacity:0;
+           
     }
-        &:active{
+
+}
+.heart-like{
+    display: flex;
+    position: absolute;
+    bottom: 24px;
+    right: 28px;
+    font-size: 2.2em;
+    opacity: 0;
+        &:hover{
             opacity: 1;
-            background: linear-gradient(142deg, rgba(231,113,218,1) 0%, rgba(147,86,220,1) 100%);;
+            transition: 0.5s;
+            background:linear-gradient(349deg, rgba(255,121,218,1) 29%, rgba(147,86,220,1) 59%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            &:active{
+                opacity: 1;
+                background:linear-gradient(349deg, rgba(255,121,218,1) 29%, rgba(147,86,220,1) 59%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+            
         }
 }
 
