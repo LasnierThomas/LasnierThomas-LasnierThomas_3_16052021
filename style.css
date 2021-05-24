@@ -262,24 +262,22 @@ footer {
   position: absolute;
   bottom: 25px;
   right: 30px;
-  z-index: 3;
+  opacity: 1;
 }
 #heart:hover {
-  display: none;
+  opacity: 0;
 }
 
-.heart-2 {
+#heart-2 {
   display: flex;
   position: absolute;
   bottom: 25px;
   right: 30px;
-  z-index: 1;
-  display: none;
+  opacity: 0;
 }
-.heart-2:hover {
-  z-index: 1;
-  display: flex;
-  color: purple;
+#heart-2:hover {
+  opacity: 1;
+  color: linear-gradient(142deg, #e771da 0%, #9356dc 100%);
 }
 
 /*# sourceMappingURL=style.css.map */
