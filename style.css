@@ -257,27 +257,22 @@ footer {
   padding: 15px 25px 15px 25px;
 }
 
-#heart {
+.heart {
   display: flex;
   position: absolute;
   bottom: 25px;
   right: 30px;
+}
+.heart:hover {
   opacity: 1;
+  transition: opacity 1s;
+  background: linear-gradient(142deg, #e771da 0%, #9356dc 100%);
+  -webkit-mask-image: url(-webkit-mask-image);
+  mask-image: url(https://fontawesome.com/icons/heart?style=regular.svg);
 }
-#heart:hover {
-  opacity: 0;
-}
-
-#heart-2 {
-  display: flex;
-  position: absolute;
-  bottom: 25px;
-  right: 30px;
-  opacity: 0;
-}
-#heart-2:hover {
+.heart:active {
   opacity: 1;
-  color: linear-gradient(142deg, #e771da 0%, #9356dc 100%);
+  background: linear-gradient(142deg, #e771da 0%, #9356dc 100%);
 }
 
 /*# sourceMappingURL=style.css.map */
