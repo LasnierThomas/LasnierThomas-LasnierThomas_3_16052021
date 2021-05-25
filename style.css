@@ -1,18 +1,295 @@
-/* Error: Can't find stylesheet to import.
- *   ,
- * 1 | @import "./base/police.scss";
- *   |         ^^^^^^^^^^^^^^^^^^^^
- *   '
- *   scss\layout\header.scss 1:9  @import
- *   scss\main.scss 1:9           root stylesheet */
-
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: "Error: Can't find stylesheet to import.\a   \2577 \a 1 \2502  @import \"./base/police.scss\";\d\a   \2502          ^^^^^^^^^^^^^^^^^^^^\a   \2575 \a   scss\\layout\\header.scss 1:9  @import\a   scss\\main.scss 1:9           root stylesheet";
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+.head-title {
+  width: 100%;
+  height: 100%;
+  font-size: 35px;
+  font-family: "Shrikhand", cursive;
+  display: flex;
+  justify-content: center;
 }
+
+footer {
+  background-color: #3f3f3f;
+  padding-top: 15px;
+  padding-bottom: 30px;
+}
+
+.footer-title {
+  font-family: "Shrikhand", cursive;
+  color: whitesmoke;
+  font-size: 1.5em;
+  font-weight: lighter;
+  margin-left: 25px;
+}
+
+.menu-footer {
+  display: flex;
+  flex-direction: column;
+  font-size: 1.2em;
+  margin-left: 25px;
+}
+
+.shop {
+  padding-bottom: 10px;
+  color: whitesmoke;
+}
+
+.fa-utensils {
+  margin-right: 10px;
+}
+
+.link-footer {
+  text-decoration: none;
+  color: whitesmoke;
+  margin-left: 3px;
+  font-weight: bold;
+  font-family: "Roboto", cursive;
+}
+
+.partener {
+  padding-bottom: 10px;
+  color: whitesmoke;
+}
+
+.fa-hands-helping {
+  margin-right: 4px;
+}
+
+#legal {
+  margin-left: 30px;
+  padding-bottom: 10px;
+}
+
+#contact {
+  margin-left: 30px;
+}
+
+.booking {
+  display: flex;
+  flex-direction: column;
+}
+
+.search-location {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #e4e4e4;
+  width: 100%;
+  height: 45px;
+}
+
+.logo-search {
+  padding-right: 15px;
+}
+
+.city-location {
+  font-family: "Roboto", cursive;
+  font-weight: bold;
+}
+
+.description-booking {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: whitesmoke;
+}
+
+#title-booking {
+  font-family: "Roboto", cursive;
+  font-weight: bolder;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  font-size: 25px;
+  width: 70%;
+  margin-top: 45px;
+}
+
+#p-booking {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  font-size: 20px;
+  width: 100%;
+  margin: 0 0 25px 0;
+}
+
+.search-button {
+  padding: 15px 20px;
+  border-radius: 50px;
+  margin-bottom: 50px;
+  font-family: "Roboto", cursive;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 17px;
+  color: white;
+  background: linear-gradient(142deg, #e771da 0%, #9356dc 100%);
+}
+.search-button:hover {
+  transition: all 0.2s ease-in-out;
+  transform: scale(1.1);
+}
+
+.operation {
+  display: flex;
+  flex-direction: column;
+}
+
+.operation-title {
+  font-size: 30px;
+  font-weight: bold;
+  font-family: "Roboto", cursive;
+  margin: 40px 0px 30px 20px;
+}
+
+.menu-operation {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.button {
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  border: transparent solid 1px;
+  background-color: whitesmoke;
+  border-radius: 20px;
+  margin-bottom: 20px;
+  margin-left: 5%;
+  text-align: center;
+  width: 300px;
+  height: 65px;
+}
+.button:hover {
+  background-color: #f1e7ff;
+}
+
+.button-number {
+  display: flex;
+  position: absolute;
+  left: -15px;
+  justify-content: flex-start;
+  align-content: center;
+  border: #9356DC solid 1px;
+  border-radius: 50%;
+  width: 3%;
+  background-color: #9356DC;
+  color: white;
+  padding: 8px 12px 6px 12px;
+}
+
+.button-icone {
+  display: inline;
+  align-content: center;
+  margin: 0 20px;
+  padding: 0px;
+}
+
+.button-title {
+  display: inline;
+  font-family: "Roboto", cursive;
+  font-weight: bold;
+}
+
+.menu {
+  background-color: #e4e4e4;
+  width: 100%;
+  height: 100%;
+  padding-top: 30px;
+  padding-bottom: 50px;
+}
+
+#menu-title {
+  font-size: 30px;
+  font-weight: bold;
+  font-family: "Roboto", cursive;
+  margin: 40px 0px 30px 20px;
+}
+
+.box-menu {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  background-color: white;
+  border-radius: 20px;
+  margin: 5%;
+}
+.box-menu img {
+  width: 100%;
+  height: 230px;
+  border-radius: 20px 20px 0 0;
+  object-fit: cover;
+}
+.box-menu h2 {
+  font-family: "Roboto", cursive;
+  font-weight: bold;
+  margin-left: 15px;
+}
+.box-menu p {
+  font-family: "Roboto", cursive;
+  margin: 0 0 15px 15px;
+  font-size: 24px;
+  line-height: 0;
+}
+.box-menu a {
+  text-decoration: none;
+  color: black;
+}
+
+#menu-new {
+  display: flex;
+  position: absolute;
+  align-self: flex-end;
+  margin: 20px 20px 0 0;
+  background-color: #99E2D0;
+  color: #21866d;
+  font-family: "Roboto", cursive;
+  font-weight: bold;
+  border-radius: 5px;
+  font-size: 18px;
+  padding: 15px 25px 15px 25px;
+}
+
+.heart {
+  display: flex;
+  position: absolute;
+  bottom: 25px;
+  right: 30px;
+  opacity: 1;
+  font-size: 2em;
+}
+.heart:hover {
+  opacity: 0;
+}
+
+.heart-like {
+  display: flex;
+  position: absolute;
+  bottom: 24px;
+  right: 28px;
+  font-size: 2.2em;
+  opacity: 0;
+}
+.heart-like:hover {
+  opacity: 1;
+  transition: 0.5s;
+  background: linear-gradient(349deg, #ff79da 29%, #9356dc 59%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.heart-like:hover:active {
+  opacity: 1;
+  background: linear-gradient(349deg, #ff79da 29%, #9356dc 59%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/*# sourceMappingURL=style.css.map */
