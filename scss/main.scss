@@ -1,8 +1,8 @@
-@import "header";
-@import "colors";
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;900&display=swap');
-@import "base";
-@import "footer";
+@import "./layout/header.scss";
+@import "./base/colors.scss";
+@import "./base/police.scss";
+@import "./layout/footer.scss";
+
 //****** Booking ******
 .booking{
     display: flex;
