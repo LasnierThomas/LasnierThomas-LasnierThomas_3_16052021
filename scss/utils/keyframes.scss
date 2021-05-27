@@ -1,0 +1,23 @@
+
+
+@keyframes rotation{
+    0%{
+        transform: translateX(-200px);
+        -webkit-transition: rotate(-180deg);
+    }
+    100%{
+        transform: translateX(200px) ;
+        -webkit-transition: rotate(180deg);
+    }
+}
+
+@keyframes loading{
+    from{
+        opacity: 0;
+        animation-timing-function: ease-out;
+    }
+    to{
+        opacity: 1;
+        animation-timing-function: ease-out;
+    }
+}
