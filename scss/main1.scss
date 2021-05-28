@@ -103,10 +103,7 @@
         width: 95%;
         margin: 10px 0 5px 11px;
         border-radius: 20px;
-        &:hover{
-            
-
-        }        
+                
         h3{
             font-family: 'Roboto', cursive;
             font-size: 1.1em;
@@ -143,21 +140,15 @@
             background: $color-3;
             color: whitesmoke;
             justify-content: center;
-            position: relative;
-            left:100%;
-            bottom: 30px;
-            &:hover{
-                animation-name: rotation;
-                animation-duration: 0.5s;
-            } 
         }
-            
+     
+                   
     }
     
 }
 .order-button{
     text-align: center;
-    margin: 25px 0px 25px 115px;
+    margin: 25px 0px 25px 30%;
     padding: 15px 10px;
     width: 35%;
     border-radius: 50px;
