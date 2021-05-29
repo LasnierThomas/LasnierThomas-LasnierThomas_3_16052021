@@ -69,24 +69,36 @@ footer {
   margin-left: 30px;
 }
 
-@keyframes rotation {
-  0% {
-    transform: translateX(-200px);
-    -webkit-transition: rotate(-180deg);
-  }
-  100% {
-    transform: translateX(200px);
-    -webkit-transition: rotate(180deg);
-  }
-}
 @keyframes loading {
   from {
     opacity: 0;
-    animation-timing-function: ease-out;
   }
   to {
     opacity: 1;
-    animation-timing-function: ease-out;
+  }
+}
+@keyframes move-validation {
+  0% {
+    transform: translateX(0px);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+@keyframes move-price {
+  0% {
+    transform: translateX(0px);
+  }
+  100% {
+    transform: translateX(-60px);
+  }
+}
+@keyframes move-p {
+  0% {
+    width: 70%;
+  }
+  100% {
+    width: 50%;
   }
 }
 .arrow {
@@ -152,7 +164,7 @@ footer {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.menu .heart-like:hover:active {
+.menu .heart-like:active {
   opacity: 1;
   background: linear-gradient(349deg, #ff79da 29%, #9356dc 59%);
   -webkit-background-clip: text;
@@ -172,19 +184,43 @@ footer {
 }
 .box-menu .border {
   border: #99E2D0 solid 3px;
-  width: 13%;
+  width: 6%;
   margin-top: -14px;
   margin-left: 20px;
 }
-.box-menu .dish {
+.box-menu .dish-validation {
+  display: flex;
+  width: 100%;
+}
+.box-menu .dish-validation:hover .validation {
+  opacity: 1;
+  animation-name: move-validation;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+.box-menu .dish-validation:hover .validation .circle {
+  transform: rotate(180deg);
+}
+.box-menu .dish-validation:hover .price {
+  animation-name: move-price;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+.box-menu .dish-validation:hover .sub-txt {
+  animation-name: move-p;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+.box-menu .dish-validation .dish {
   display: flex;
   flex-direction: column;
   background: white;
-  width: 95%;
-  margin: 10px 0 5px 11px;
+  width: 97%;
+  height: 75px;
+  margin: 10px 11px 5px 11px;
   border-radius: 20px;
 }
-.box-menu .dish h3 {
+.box-menu .dish-validation .dish h3 {
   font-family: "Roboto", cursive;
   font-size: 1.1em;
   width: 70%;
@@ -193,7 +229,7 @@ footer {
   text-overflow: ellipsis;
   white-space: nowrap;
 }
-.box-menu .dish p {
+.box-menu .dish-validation .dish .sub-txt {
   font-family: "Roboto", cursive;
   font-size: 1em;
   width: 70%;
@@ -203,34 +239,40 @@ footer {
   text-overflow: ellipsis;
   white-space: nowrap;
 }
-.box-menu .dish .price {
+.box-menu .dish-validation .dish .price {
   display: flex;
   justify-content: flex-end;
   font-family: "Roboto", cursive;
   font-weight: bold;
   margin: -18px 26px 0 0;
-  width: 90%;
+  width: 95%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
-.box-menu .dish .validation {
+.box-menu .dish-validation .validation {
   display: flex;
-  width: 10%;
-  height: 100%;
+  width: 70px;
+  height: 75px;
   font-size: 1.7em;
   background: #99E2D0;
   color: whitesmoke;
   justify-content: center;
-  position: relative;
-  left: 100%;
-  bottom: 30px;
+  align-items: center;
+  margin: 10px 0 0 0;
+  border-radius: 0 20px 20px 0;
+  position: absolute;
+  right: -62px;
+  opacity: 0;
 }
-.box-menu .dish .validation:hover {
-  animation-name: rotation;
-  animation-duration: 0.5s;
+.box-menu .dish-validation .validation .circle {
+  transition: all 1s ease-in-out;
+  rotate: 180deg;
 }
 
 .order-button {
   text-align: center;
-  margin: 25px 0px 25px 115px;
+  margin: 5% 0 5% 30%;
   padding: 15px 10px;
   width: 35%;
   border-radius: 50px;

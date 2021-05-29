@@ -46,13 +46,12 @@
         right: 50px;
         opacity: 1;
         font-size: 2em;
-        
-      }
-      .heart:hover {
+    }
+    .heart:hover {
         opacity: 0;
-      }
+    }
       
-      .heart-like {
+    .heart-like {
         display: flex;
         position: absolute;
         top: 27px;
@@ -60,20 +59,20 @@
         font-size: 2.2em;
         opacity: 0;
         
-      }
-      .heart-like:hover {
+    }
+    .heart-like:hover {
         opacity: 1;
         transition: 0.5s;
         background: linear-gradient(349deg, #ff79da 29%, #9356dc 59%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
-      }
-      .heart-like:hover:active {
+    }
+    .heart-like:active {
         opacity: 1;
         background: linear-gradient(349deg, #ff79da 29%, #9356dc 59%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
-      }
+    } 
 
 }
 .box-menu{
@@ -81,40 +80,63 @@
     display: flex;
     flex-direction: column;
     animation:loading 2s 1s 1 alternate backwards;
-    
-    
-    
-     
-    h2{
+        h2{
         font-family: 'Roboto',cursive;
         font-weight: lighter; 
         margin-left: 20px; 
-    }
-    .border{
+        }
+        .border{
         border: $color-3 solid 3px;
-        width: 13%;
+        width: 6%;
         margin-top: -14px;
         margin-left: 20px; 
-    }
-    .dish{
+         } 
+    .dish-validation{
+        display: flex;
+        width: 100%;
+        &:hover{
+            .validation{
+                opacity: 1;
+                animation-name: move-validation;
+                animation-duration: 2s;
+                animation-fill-mode: forwards;
+                .circle{
+                    transform: rotate(180deg);
+                }
+            }
+            .price{
+                animation-name: move-price;
+                animation-duration: 2s;
+                animation-fill-mode: forwards;
+            }
+            .sub-txt{
+                animation-name: move-p;
+                animation-duration: 2s;
+                animation-fill-mode: forwards;
+            }
+        }
+    
+
+        .dish{
         display: flex;
         flex-direction: column;
         background: white;
-        width: 95%;
-        margin: 10px 0 5px 11px;
+        width: 97%;
+        height: 75px;
+        margin: 10px 11px 5px 11px;
         border-radius: 20px;
                 
-        h3{
+             h3{
             font-family: 'Roboto', cursive;
             font-size: 1.1em;
             width: 70%;
             margin: 10px 0 0 10px;
             overflow: hidden;
             text-overflow: ellipsis;
-            white-space: nowrap;
-            
-        }
-        p{
+            white-space: nowrap;  
+          }
+
+            .sub-txt{
             font-family: 'Roboto', cursive;
             font-size: 1em;
             width: 70%;
@@ -123,29 +145,43 @@
             overflow: hidden;
             text-overflow: ellipsis;
             white-space: nowrap;
-        }
-        .price{
+            }
+
+            .price{
             display: flex;
             justify-content: flex-end;
             font-family: 'Roboto', cursive;
             font-weight: bold;
             margin: -18px 26px 0 0;
-            width: 90%;
+            width: 95%;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            }
+
         }
         .validation{
-            display: flex;
-            width: 10%;
-            height: 100%;
-            font-size: 1.7em;
-            background: $color-3;
-            color: whitesmoke;
-            justify-content: center;
+         display: flex;
+         width: 70px;
+         height: 75px;
+         font-size: 1.7em;
+         background: $color-3;
+         color: whitesmoke;
+         justify-content: center;
+         align-items: center;
+         margin: 10px 0 0 0;
+         border-radius: 0 20px 20px 0 ;
+         position: absolute;
+         right: -62px;
+         opacity: 0;
+            .circle{
+                transition: all 1s ease-in-out;
+                rotate: 180deg;
+            }              
         }
-     
-                   
     }
-    
 }
+
 .order-button{
     text-align: center;
     margin: 5% 0 5% 30% ;
