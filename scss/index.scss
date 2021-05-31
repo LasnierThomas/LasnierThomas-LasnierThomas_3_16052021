@@ -1,8 +1,7 @@
+@import "./base/police.scss";
 @import "./layout/header.scss";
 @import "./base/colors.scss";
 @import "./layout/footer.scss";
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
 
 //****** Booking ******
 .booking{
@@ -83,6 +82,7 @@
     display: flex;
     align-items: center;
     flex-direction: column;
+    padding-bottom: 50px;
 }
 
 .button{
@@ -148,6 +148,7 @@
 .all-box{
     position: relative;
     display: flex;
+    flex-direction: column;
     width: 100%;
 }
 
@@ -182,24 +183,22 @@
                 color: black;
             }
 }
-#menu-new{
+.menu-new{
     display: flex;
     position: absolute;
-    align-self: flex-end;
-    margin: 20px 20px 0 0;
+    top:20px;
+    right: 20px;
     background-color: $color-3;
     color: #21866d;
-    font-family: 'Roboto', cursive;
     font-weight: bold;
     border-radius: 5px;
-    font-size: 18px;
     padding: 15px 25px 15px 25px;
 }
 
 .heart {
     display: flex;
     position: absolute;
-    top: 29px;
+    bottom: 25px;
     right: 50px;
     opacity: 1;
     font-size: 2em;
@@ -210,7 +209,7 @@
 .heart-like {
     display: flex;
     position: absolute;
-    top: 27px;
+    bottom: 23px;
     right: 48px;
     font-size: 2.2em;
     opacity: 0;
@@ -230,13 +229,24 @@
     -webkit-text-fill-color: transparent;
 } 
 
-@media  screen and (min-width: 900px)
-{
+@media screen and (min-width:900px){
     .all-box{
-        flex-direction: row;
-        
+        flex-direction: unset;
+        flex-wrap: wrap;
+        .box-menu{
+            width: 40%;
+        }
     }
 }
+@media screen and (min-width:1150px) {
+    .menu-operation{
+        flex-direction: row;
+        justify-content: center;
+    }
+    
+}
+
+
     
 
 
