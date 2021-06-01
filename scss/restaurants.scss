@@ -109,7 +109,7 @@
                 animation-duration: 2s;
                 animation-fill-mode: forwards;
             }
-            .sub-txt{
+            .dish-txt{
                 animation-name: move-p;
                 animation-duration: 2s;
                 animation-fill-mode: forwards;
@@ -169,10 +169,9 @@
          color: whitesmoke;
          justify-content: center;
          align-items: center;
-         margin: 10px 0 0 0;
          border-radius: 0 20px 20px 0 ;
          position: absolute;
-         right: -62px;
+         right: 11px;
          opacity: 0;
             .circle{
                 transition: all 1s ease-in-out;
@@ -208,3 +207,13 @@
     margin-left: 0px;
 }
 
+@media screen and (min-width:900px){
+    .menu{
+        width: 70%;
+        margin: 0 auto;
+    }
+    .menu-footer{
+        flex-direction: row;
+        justify-content: space-around;
+    }
+}

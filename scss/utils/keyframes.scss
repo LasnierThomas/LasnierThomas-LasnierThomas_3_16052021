@@ -12,19 +12,20 @@
 
 @keyframes move-validation{
     0%{
-        transform: translateX(0px);
+        width: 0%;
     }
     100%{
-        transform: translateX(-100%);
+       width: 20%;
     }
 }
+
 
 @keyframes move-price{
     0%{
         transform: translateX(0px);
     }
     100%{
-        transform: translateX(-60px);
+        transform: translateX(-20%);
     }
 }
 
@@ -34,5 +35,41 @@
     }
     100%{
         width: 50%;
+    }
+}
+@keyframes spin{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+    
+}
+
+@media screen and (min-width:900px){
+    @keyframes move-validation{
+        0%{
+            width: 0%;
+        }
+        100%{
+           width: 15%;
+        }
+    }
+    @keyframes move-price{
+        0%{
+            transform: translateX(0px);
+        }
+        100%{
+            transform: translateX(-15%);
+        }
+    }
+    @keyframes move-p{
+        0%{
+            width: 70%;
+        }
+        100%{
+            width: 70%;
+        }
     }
 }

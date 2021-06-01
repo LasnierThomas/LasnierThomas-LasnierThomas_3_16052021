@@ -79,10 +79,10 @@ footer {
 }
 @keyframes move-validation {
   0% {
-    transform: translateX(0px);
+    width: 0%;
   }
   100% {
-    transform: translateX(-100%);
+    width: 20%;
   }
 }
 @keyframes move-price {
@@ -90,7 +90,7 @@ footer {
     transform: translateX(0px);
   }
   100% {
-    transform: translateX(-60px);
+    transform: translateX(-20%);
   }
 }
 @keyframes move-p {
@@ -99,6 +99,40 @@ footer {
   }
   100% {
     width: 50%;
+  }
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@media screen and (min-width: 900px) {
+  @keyframes move-validation {
+    0% {
+      width: 0%;
+    }
+    100% {
+      width: 15%;
+    }
+  }
+  @keyframes move-price {
+    0% {
+      transform: translateX(0px);
+    }
+    100% {
+      transform: translateX(-15%);
+    }
+  }
+  @keyframes move-p {
+    0% {
+      width: 70%;
+    }
+    100% {
+      width: 70%;
+    }
   }
 }
 .arrow {
@@ -206,7 +240,7 @@ footer {
   animation-duration: 2s;
   animation-fill-mode: forwards;
 }
-.box-menu .dish-validation:hover .sub-txt {
+.box-menu .dish-validation:hover .dish-txt {
   animation-name: move-p;
   animation-duration: 2s;
   animation-fill-mode: forwards;
@@ -259,10 +293,9 @@ footer {
   color: whitesmoke;
   justify-content: center;
   align-items: center;
-  margin: 10px 0 0 0;
   border-radius: 0 20px 20px 0;
   position: absolute;
-  right: -62px;
+  right: 11px;
   opacity: 0;
 }
 .box-menu .dish-validation .validation .circle {
@@ -296,6 +329,18 @@ footer {
 
 #contact {
   margin-left: 0px;
+}
+
+@media screen and (min-width: 900px) {
+  .menu {
+    width: 70%;
+    margin: 0 auto;
+  }
+
+  .menu-footer {
+    flex-direction: row;
+    justify-content: space-around;
+  }
 }
 
 /*# sourceMappingURL=restaurants.css.map */
