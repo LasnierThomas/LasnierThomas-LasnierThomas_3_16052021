@@ -168,7 +168,6 @@
   top: 11%;
   left: 39%;
   border-radius: 50px;
-  border: 6px soloid transparent;
   border-top-color: red;
   -webkit-animation: spin 1s linear infinite;
   animation: spin 2s linear infinite;
