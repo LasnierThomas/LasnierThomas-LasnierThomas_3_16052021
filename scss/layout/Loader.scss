@@ -11,7 +11,7 @@
     justify-content: center;
     align-items: center;
     pointer-events: none;
-    animation: time-loader 2s ease-in-out;
+    animation: time-loader 3s ease-in-out;
     animation-fill-mode:forwards
 }
 .loader{
@@ -65,7 +65,7 @@
     top: 11%;
     left: 39%;
     border-radius: 50px;
-    border: 6 px soloid transparent;
+    border: 6px soloid transparent;
     border-top-color: red;
     -webkit-animation: spin 1s linear infinite;
     animation: spin 2s linear infinite;
