@@ -109,6 +109,28 @@ footer {
     transform: rotate(360deg);
   }
 }
+@keyframes flash {
+  0% {
+    color: #FF79DA;
+    text-shadow: 0 0 7px #9356DC;
+  }
+  90% {
+    color: #99E2D0;
+    text-shadow: none;
+  }
+  100% {
+    color: #FF79DA;
+    text-shadow: 0 0 7px #9356DC;
+  }
+}
+@keyframes time-loader {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 @media screen and (min-width: 900px) {
   @keyframes move-validation {
     0% {
@@ -205,6 +227,11 @@ footer {
   -webkit-text-fill-color: transparent;
 }
 
+.all-box-dish {
+  display: flex;
+  flex-direction: column;
+}
+
 .box-menu {
   position: relative;
   display: flex;
@@ -241,6 +268,25 @@ footer {
   animation-fill-mode: forwards;
 }
 .box-menu .dish-validation:hover .dish-txt {
+  animation-name: move-p;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+.box-menu .dish-validation:active .validation {
+  opacity: 1;
+  animation-name: move-validation;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+.box-menu .dish-validation:active .validation .circle {
+  transform: rotate(180deg);
+}
+.box-menu .dish-validation:active .price {
+  animation-name: move-price;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+.box-menu .dish-validation:active .dish-txt {
   animation-name: move-p;
   animation-duration: 2s;
   animation-fill-mode: forwards;
@@ -303,6 +349,18 @@ footer {
   rotate: 180deg;
 }
 
+.box-menu:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.box-menu:nth-child(2) {
+  animation-delay: 0.4s;
+}
+
+.box-menu:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
 .order-button {
   text-align: center;
   margin: 5% 0 5% 30%;
@@ -333,13 +391,40 @@ footer {
 
 @media screen and (min-width: 900px) {
   .menu {
-    width: 70%;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .box-menu {
+    width: 90%;
     margin: 0 auto;
   }
 
   .menu-footer {
     flex-direction: row;
     justify-content: space-around;
+  }
+}
+@media screen and (min-width: 1150px) {
+  .restaurant img {
+    height: 360px;
+  }
+
+  .restaurant {
+    margin-bottom: -69px;
+  }
+
+  .menu {
+    width: 100%;
+    height: 600px;
+  }
+
+  .all-box-dish {
+    flex-direction: row;
+  }
+
+  .box-menu {
+    width: 34%;
   }
 }
 

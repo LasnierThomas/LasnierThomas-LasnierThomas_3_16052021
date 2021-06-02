@@ -44,6 +44,28 @@
     transform: rotate(360deg);
   }
 }
+@keyframes flash {
+  0% {
+    color: #FF79DA;
+    text-shadow: 0 0 7px #9356DC;
+  }
+  90% {
+    color: #99E2D0;
+    text-shadow: none;
+  }
+  100% {
+    color: #FF79DA;
+    text-shadow: 0 0 7px #9356DC;
+  }
+}
+@keyframes time-loader {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 @media screen and (min-width: 900px) {
   @keyframes move-validation {
     0% {
@@ -71,14 +93,17 @@
   }
 }
 .loader-index {
+  z-index: 2;
   position: absolute;
   width: 100%;
-  height: 100%;
-  background: white;
+  height: 305%;
+  background: rgba(255, 255, 255, 0.9);
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
+  pointer-events: none;
+  animation: time-loader 2s ease-in-out;
+  animation-fill-mode: forwards;
 }
 
 .loader {
@@ -88,15 +113,60 @@
 }
 
 .loader-p {
-  font-size: 2em;
+  position: relative;
+  bottom: 31%;
+  font-size: 3em;
   font-family: "Shrikhand", cursive;
   text-align: center;
+  letter-spacing: 5px;
+  color: #99E2D0;
+  animation: flash 1.2s linear infinite;
+}
+
+.loader-p:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.loader-p:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.loader-p:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+.loader-p:nth-child(4) {
+  animation-delay: 0.4s;
+}
+
+.loader-p:nth-child(5) {
+  animation-delay: 0.5s;
+}
+
+.loader-p:nth-child(6) {
+  animation-delay: 0.6s;
+}
+
+.loader-p:nth-child(7) {
+  animation-delay: 0.7s;
+}
+
+.loader-p:nth-child(8) {
+  animation-delay: 0.8s;
+}
+
+.loader-p:nth-child(9) {
+  animation-delay: 0.9s;
+}
+
+.loader-p:nth-child(10) {
+  animation-delay: 1s;
 }
 
 .loader-circle {
   position: absolute;
-  top: 5px;
-  left: 42%;
+  top: 11%;
+  left: 39%;
   border-radius: 50px;
   border: 6 px soloid transparent;
   border-top-color: red;
@@ -132,11 +202,25 @@
   animation: spin 2.3s linear infinite;
 }
 
-.fondu-out {
-  opacity: 0;
-  transition: opacity 0.3s ease-in-out;
-}
+@media screen and (min-width: 900px) {
+  .loader-index {
+    height: 225%;
+  }
 
+  .loader-circle {
+    top: 16%;
+    left: 45%;
+  }
+
+  .loader-p {
+    bottom: 25%;
+  }
+}
+@media screen and (min-width: 1150px) {
+  .loader-index {
+    height: 215%;
+  }
+}
 .head-title {
   width: 100%;
   height: 100%;
@@ -281,6 +365,7 @@ footer {
 }
 
 .menu-operation {
+  z-index: 1;
   display: flex;
   align-items: center;
   flex-direction: column;

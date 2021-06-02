@@ -80,6 +80,7 @@
     margin: 40px 0px 30px 20px;
 }
 .menu-operation{
+    z-index: 1;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -147,6 +148,7 @@
     margin: 40px 0px 30px 20px;
 }
 .all-box{
+    
     position: relative;
     display: flex;
     flex-direction: column;

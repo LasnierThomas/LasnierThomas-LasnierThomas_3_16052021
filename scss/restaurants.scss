@@ -75,6 +75,11 @@
     } 
 
 }
+.all-box-dish{
+    display:flex;
+    flex-direction: column;
+}
+
 .box-menu{
     position: relative;
     display: flex;
@@ -104,6 +109,7 @@
                     transform: rotate(180deg);
                 }
             }
+            
             .price{
                 animation-name: move-price;
                 animation-duration: 2s;
@@ -115,8 +121,29 @@
                 animation-fill-mode: forwards;
             }
         }
-    
-
+        &:active{
+            .validation{
+                opacity: 1;
+                animation-name: move-validation;
+                animation-duration: 2s;
+                animation-fill-mode: forwards;
+                .circle{
+                    transform: rotate(180deg);
+                }
+            }
+            
+            .price{
+                animation-name: move-price;
+                animation-duration: 2s;
+                animation-fill-mode: forwards;
+            }
+            .dish-txt{
+                animation-name: move-p;
+                animation-duration: 2s;
+                animation-fill-mode: forwards;
+            }
+        }
+        
         .dish{
         display: flex;
         flex-direction: column;
@@ -180,7 +207,15 @@
         }
     }
 }
-
+.box-menu:nth-child(1){
+    animation-delay: 0.1s;
+     }
+.box-menu:nth-child(2){
+    animation-delay: 0.4s;
+     }
+.box-menu:nth-child(3){
+     animation-delay: 0.6s;
+     }
 .order-button{
     text-align: center;
     margin: 5% 0 5% 30% ;
@@ -209,11 +244,33 @@
 
 @media screen and (min-width:900px){
     .menu{
-        width: 70%;
+        width: 100%;
+        margin: 0 auto;
+    }
+    .box-menu{
+        width: 90%;
         margin: 0 auto;
     }
     .menu-footer{
         flex-direction: row;
         justify-content: space-around;
+    }
+}
+@media screen and (min-width:1150px){
+    .restaurant img{
+        height: 360px;
+    }
+    .restaurant{
+        margin-bottom: -69px;
+    }
+    .menu{
+        width: 100%;
+        height: 600px;
+    }
+    .all-box-dish{
+        flex-direction: row;
+    }
+    .box-menu{
+        width: 34%;
     }
 }

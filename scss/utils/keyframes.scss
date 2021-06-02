@@ -46,6 +46,30 @@
     }
     
 }
+@keyframes flash {
+    0%{
+        color:$color-2;
+        text-shadow: 0 0 7px $color-1;
+    }
+    90%{
+        color:$color-3;
+        text-shadow: none;
+    }
+    100%{
+        color:$color-2;
+        text-shadow: 0 0 7px $color-1;
+    }
+    
+}
+@keyframes time-loader {
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+    
+}
 
 @media screen and (min-width:900px){
     @keyframes move-validation{
