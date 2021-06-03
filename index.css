@@ -183,6 +183,7 @@
   border: 5px solid transparent;
   opacity: 0.8;
   border-top-color: #99E2D0;
+  animation: spin 2s linear infinite;
   -webkit-animation: spin 2s linear infinite;
   animation: spin 2s linear infinite;
 }
@@ -197,6 +198,7 @@
   border: 5px solid transparent;
   opacity: 0.7;
   border-top-color: #FF79DA;
+  animation: spin 2.3s linear infinite;
   -webkit-animation: spin 2.3s linear infinite;
   animation: spin 2.3s linear infinite;
 }
@@ -508,13 +510,16 @@ footer {
   transition: 0.5s;
   background: linear-gradient(349deg, #ff79da 29%, #9356dc 59%);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .heart-like:active {
   opacity: 1;
   background: linear-gradient(349deg, #ff79da 29%, #9356dc 59%);
+  background-clip: text;
   -webkit-background-clip: text;
+  text-fill-color: transparent;
   -webkit-text-fill-color: transparent;
 }
 
