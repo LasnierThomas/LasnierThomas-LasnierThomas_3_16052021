@@ -65,8 +65,7 @@
     top: 11%;
     left: 39%;
     border-radius: 50px;
-    border-top-color: red;
-    -webkit-animation: spin 1s linear infinite;
+    animation: spin 1s linear infinite;
     animation: spin 2s linear infinite;
     &::after{
         content: "";
@@ -80,8 +79,7 @@
         opacity: 0.8;
         border-top-color: $color-3;
         animation: spin 2s linear infinite;
-        -webkit-animation: spin 2s linear infinite;
-        animation: spin 2s linear infinite;
+        
     }
     &::before{
         content: "";
@@ -95,8 +93,7 @@
         opacity: 0.7;
         border-top-color: $color-2;
         animation: spin 2.3s linear infinite;
-        -webkit-animation: spin 2.3s linear infinite;
-        animation: spin 2.3s linear infinite;
+        
     }
 }
 
