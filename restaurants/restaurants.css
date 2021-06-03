@@ -262,7 +262,7 @@ footer {
   animation-fill-mode: forwards;
 }
 .box-menu .dish-validation:hover .validation .circle {
-  transform: rotate(180deg);
+  transform: rotate(360deg);
 }
 .box-menu .dish-validation:hover .price {
   animation-name: move-price;
@@ -281,7 +281,7 @@ footer {
   animation-fill-mode: forwards;
 }
 .box-menu .dish-validation:active .validation .circle {
-  transform: rotate(180deg);
+  transform: rotate(-180deg);
 }
 .box-menu .dish-validation:active .price {
   animation-name: move-price;
@@ -348,7 +348,7 @@ footer {
 }
 .box-menu .dish-validation .validation .circle {
   transition: all 1s ease-in-out;
-  rotate: -180deg;
+  transform: rotate(180deg);
 }
 
 .box-menu:nth-child(1) {
