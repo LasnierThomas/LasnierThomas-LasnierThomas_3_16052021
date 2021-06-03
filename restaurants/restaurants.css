@@ -348,7 +348,7 @@ footer {
 }
 .box-menu .dish-validation .validation .circle {
   transition: all 1s ease-in-out;
-  rotate: 180deg;
+  rotate: -180deg;
 }
 
 .box-menu:nth-child(1) {
