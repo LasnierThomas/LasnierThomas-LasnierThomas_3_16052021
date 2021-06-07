@@ -65,6 +65,7 @@
         transition: 0.5s;
         background: linear-gradient(349deg, #ff79da 29%, #9356dc 59%);
         background-clip:text;
+        -webkit-background-clip: text;
         color: transparent;
         
     }
@@ -72,6 +73,7 @@
         opacity: 1;
         background: linear-gradient(349deg, #ff79da 29%, #9356dc 59%);
         background-clip:text;
+        -webkit-background-clip: text;
         color: transparent;
         
     } 
@@ -109,6 +111,7 @@
                 animation-fill-mode: forwards;
                 .circle{
                     transform: rotate(360deg);
+                    
                 }
             }
             
@@ -158,7 +161,7 @@
              h3{
             font-family: 'Roboto', cursive;
             font-size: 1.1em;
-            width: 70%;
+            width: 100%;
             margin: 10px 0 0 10px;
             overflow: hidden;
             text-overflow: ellipsis;
@@ -168,7 +171,7 @@
             .sub-txt{
             font-family: 'Roboto', cursive;
             font-size: 1em;
-            width: 70%;
+            width: 100%;
             margin: 13px 0 0 10px;
             line-height: 14px;
             overflow: hidden;
