@@ -75,9 +75,16 @@ footer {
 @keyframes move-validation {
   0% {
     width: 0%;
+    opacity: 0;
+  }
+  10% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.8;
   }
   100% {
-    width: 20%;
+    width: 15%;
   }
 }
 @keyframes move-price {
@@ -130,6 +137,13 @@ footer {
   @keyframes move-validation {
     0% {
       width: 0%;
+      opacity: 0;
+    }
+    10% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 0.8;
     }
     100% {
       width: 15%;
